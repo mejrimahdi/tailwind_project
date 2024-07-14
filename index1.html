@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- component -->
+<style>
+    .header-links li span {
+      position: relative;
+      z-index: 0;
+    }
+  
+    .header-links li span::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 2px;
+      left: -4px;
+      right: -4px;
+      display: block;
+      height: 6px;
+    }
+  
+    .header-links li.active span::before {
+      background-color: #fcae04;
+    }
+  
+    .header-links li:not(.active):hover span::before {
+      background-color: #ccc;
+    }
+  </style>
+  
+  <header class="bg-white shadow-lg h-24 hidden md:flex">
+    <a href="" class="border flex-shrink-0 flex items-center justify-center px-4 lg:px-6 xl:px-8">
+      <img class="h-24 w-auto" src="https://img.freepik.com/premium-vector/sport-car-llogo-design-fast-car-silhouette-icon_141130-9086.jpg" alt="" />
+    </a>
+    <nav class="header-links contents font-semibold text-base lg:text-lg">
+      <ul class="flex items-center ml-4 xl:ml-8 mr-auto">
+        <li class="p-3 xl:p-6 active">
+          <a href="">
+            <span>Acceuil</span>
+          </a>
+        </li>
+        <li class="p-3 xl:p-6">
+          <a href="">
+            <span>A Propos</span>
+          </a>
+        </li>
+        <li class="p-3 xl:p-6">
+          <a href="">
+            <span>Services</span>
+          </a>
+        </li>
+        
+        </li>
+        <li class="p-3 xl:p-6">
+          <a href="" class="flex items-center">
+            <span>Voitures</span>
+            <svg class="h-3 opacity-30 ml-2" aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-down fa-w-14 fa-7x"><path fill="currentColor" d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="hidden xl:contents">
+      <ul class="flex items-center mr-4 lg:mr-6 xl:mr-8">
+        <li class="p-1">
+          <a href="" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+            <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-twitter fa-w-16 fa-9x"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+          </a>
+        </li>
+        <li class="p-1">
+          <a href="" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+            <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-facebook-f fa-w-10 fa-7x"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+          </a>
+        </li>
+        <li class="p-1">
+          <a href="" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+            <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-9x"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+          </a>
+        </li>
+        <li class="p-1">
+          <a href="" class="inline-block rounded-full border p-2 hover:shadow-lg hover:border-opacity-0 duration-200 hover:-translate-y-0.5">
+            <svg class="h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-instagram fa-w-14 fa-9x"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="border flex items-center px-4 lg:px-6 xl:px-8">
+      <a href="" class="mr-4 lg:mr-6 xl:mr-8">
+        <svg class="h-6 xl:h-8" aria-hidden="true" focusable="false" data-prefix="far" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16 fa-3x"><path fill="currentColor" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>
+      </a>
+      <button class="bg-black hover:bg-gray-700 text-white font-bold px-4 xl:px-6 py-2 xl:py-3 rounded">Contact Me</button>
+    </div>
+  </header>
+  <div class="container mx-auto pt-16">
+    <div class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16">
+        <h1 tabindex="0" class="focus:outline-none xl:text-5xl md:text-3xl text-xl dark:text-white text-center text-gray-800 font-extrabold mb-5 pt-4">Nos Partenaires</h1>
+        <h2 tabindex="0" class="focus:outline-none text-base md:text-lg lg:text-xl dark:text-gray-200 text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto">Vous avez un projet d’achat d’une voiture neuve ? Découvrez notre sélection de véhicules neufs disponibles immédiatement. Vous y trouverez un vaste choix de modèles en stock des plus grandes marques automobiles..</h2>
+    </div>
+    <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
+        <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center">
+            <img class="col-span-2 max-h-40 w-full object-contain lg:col-span-1" src=https://i.pinimg.com/originals/b1/b0/39/b1b039f7ff7353f93913c9201c4191eb.jpg alt="Transistor" width="158" height="48">
+        </div>
+        <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 pb-16 items-center">
+            <img class="col-span-2 max-h-50 w-full object-contain lg:col-span-1" src=https://th.bing.com/th/id/OIP.7xWJkTEMjrr5gVslBPdaHQHaFj?rs=1&pid=ImgDetMain alt="Reform" width="158" height="48">
+        </div>
+        <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 pb-16 pt-4 items-center">
+            <img class="col-span-2 max-h-46 w-full object-contain lg:col-span-1" src=https://th.bing.com/th/id/OIP.oAvTp0G1grAlzzcoSXRM3gAAAA?w=360&h=396&rs=1&pid=ImgDetMain alt="Tuple" width="158" height="48">
+        </div>
+        <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 pb-16 items-center">
+            <img class="col-span-2 max-h-40 w-full object-contain sm:col-start-2 lg:col-span-1" src=https://i.pinimg.com/originals/83/1e/ac/831eacac136a99f9ffe1766d12c220b3.jpg alt="SavvyCal" width="160" height="52">
+        </div>
+       
+    </div>
+</div>
+<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <img src="https://images.hdqwalls.com/wallpapers/bugatti-la-voiture-noire-side-view-concept-04.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">A Propos De Nous</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-300">Doté d’une expérience de plus de 30 ans dans le secteur automobile, nous avons pour ambition de vous fournir un service de proximité à la hauteur de vos attentes..</p>
+    </div>
+    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+    
+      <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col-reverse">
+          <dt class="text-base leading-7 text-gray-300">Voitures vendues</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">1484</dd>
+        </div>
+        <div class="flex flex-col-reverse">
+          <dt class="text-base leading-7 text-gray-300">Voitures réparées</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">5000+</dd>
+        </div>
+        <div class="flex flex-col-reverse">
+          <dt class="text-base leading-7 text-gray-300">Voitures en stock</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">73</dd>
+        </div>
+        
+      </dl>
+    </div>
+  </div>
+</div>
+<footer>
+  
+  <div class="bg-linear-pink-invert py-12 px-4">
+    <div tabindex="0" aria-label="footer" class="focus:outline-none mx-auto container flex flex-col items-center justify-center">
+        <div tabindex="0" aria-label="prodify logo" role="img">
+           <img class="h-24 w-auto" src="https://img.freepik.com/premium-vector/sport-car-llogo-design-fast-car-silhouette-icon_141130-9086.jpg" alt="">
+        </div>
+        <div class="text-black flex flex-col md:items-center f-f-l pt-3">
+            <h1 tabindex="0" class="focus:outline-none dark:text-white text-2xl font-black">MEJRI AUTO</h1>
+            <div class="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
+                <h2  class=" md:mr-6 pb-4 md:py-0 cursor-pointer"><a  class="focus:outline-none dark:text-white focus:underline hover:text-gray-700" href="javascript:void(0)">Download Now</a> </h2>
+                <h2  class="cursor-pointer"><a class="focus:outline-none dark:text-white focus:underline hover:text-gray-700" href="javascript:void(0)">License</a> </h2>
+            </div>
+            <div class="my-6 text-base text-color f-f-l"> 
+                <ul class="md:flex items-center">
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none dark:text-white  focus:underline hover:text-gray-500">About </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none dark:text-white  focus:underline hover:text-gray-500">Features </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none dark:text-white  focus:underline hover:text-gray-500">Pricing </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none dark:text-white  focus:underline hover:text-gray-500">Careers </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none dark:text-white  focus:underline hover:text-gray-500">Help </a></li>
+                    <li class="cursor-pointer pt-4 lg:py-0"><a href="javascript:void(0)" class="focus:outline-none focus:underline dark:text-white hover:text-gray-500">Privacy Policy </a></li>
+                </ul>
+            </div>
+            <div class="text-sm text-color mb-10 f-f-l">
+                <p tabindex="0" class="dark:text-white focus:outline-none">© 2024 All rights reserved</p>
+            </div>
+        </div>
+        <div class="w-9/12 h-0.5 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+        <div class="flex justify-between items-center pt-12">
+            <a href="javascript:void(0)" class="hover:shadow-lg mr-4 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-gray-600" aria-label="download on the app store"><div class="">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg2.svg" alt="download on the app store">
+            </div></a>
+            <button  class="hover:shadow-lg focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-gray-600" aria-label="get it on google play"></a>
+            <div>
+              <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg3.svg" alt="get it on google play">                    
+            </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+</footer>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
